@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>中联华诺(北京)科技有限公司</title>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  // function isMobile() {
+  //   var userAgenInfo = navigator.userAgent
+
+  //   var Agents = new Array('Android', 'iPhone', 'SymbianOS', 'iPad', 'iPod')
+  //   var flag = false
+  //   for (var v = 0; v < Agents.length; v++) {
+  //     if (userAgenInfo.indexOf(Agents[v]) > 0) {
+  //       flag = true
+  //       break
+  //     }
+  //   }
+  //   return flag
+  // }
+  function isMobile() {
+    var flag = navigator.userAgent.match(
+      /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+    );
+    if (flag === null &&window.screen.height< window.screen.width) {
+      window.location.href = '/pc.html#/'
+    } else {
+      window.location.href = '/moblie.html#/'
+    }
+  }
+  isMobile()
+    // if (isMobile()) {
+    //   window.location.href = '/m_index.html#/'
+    // } else {
+    //   window.location.href = '/p_index.html#/'
+    // }
+</script>
